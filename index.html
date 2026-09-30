@@ -1,33 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
         <title>Frislet: Flashcards</title>
-        <link rel="icon" type="image/x-icon" href="images/logo.png">
+        <link rel="icon" type="image/x-icon" href="images/logo.png" />
 
-        <meta property="og:title" content="Frislet: Flashcards">
-        <meta property="og:description" content="funky flashcards">
-        <meta property="og:type" content="website">
+        <meta property="og:title" content="Frislet: Flashcards" />
+        <meta property="og:description" content="funky flashcards" />
+        <meta property="og:type" content="website" />
         <!-- <meta property="og:image" content="https://frislet.pages.dev/images/logo.png"> -->
         <!-- <meta property="og:url" content="frislet.pages.dev"> -->
 
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/page.css">
-        <link rel="stylesheet" href="css/flashcard.css">
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/page.css" />
+        <link rel="stylesheet" href="css/flashcard.css" />
 
-        <script src="src/core.js"></script>
-        <script src="src/events.js"></script>
-        <script src="src/logs.js"></script>
-        <script src="src/intervals.js"></script>
-        <script src="src/html.js"></script>
-        <script src="src/appmodel.js"></script>
-        <script src="src/handlers.js"></script>
-        <script src="src/renderregistry.js"></script>
-        <script src="src/render.js"></script>
-        <script src="src/bootstrap.js"></script>
+        <script type="module" src="src/core.js"></script>
+        <script type="module" src="src/events.js"></script>
+        <script type="module" src="src/logs.js"></script>
+        <script type="module" src="src/intervals.js"></script>
+        <script type="module" src="src/html.js"></script>
+        <script type="module" src="src/appmodel.js"></script>
+        <script type="module" src="src/handlers.js"></script>
+        <script type="module" src="src/loader.js"></script>
+        <script type="module" src="src/renderregistry.js"></script>
+        <script type="module" src="src/render.js"></script>
+        <script type="module" src="src/bootstrap.js"></script>
     </head>
 
     <body>
-        
+        <div id="page_navigation">
+        <a onclick="App.Handlers.requestFileBrowser()">import</a>
+        </div>
+        <div id="page_set">
+            <div id="page_setManifest">
+                <div id="page_placeholder">
+                    <img src="images/logo-light.png">
+                    <h1>load a set!</h1>
+                </div>
+
+            </div>
+
+            <div id="page_setContent"></div>
+        </div>
     </body>
 </html>

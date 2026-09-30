@@ -15,13 +15,14 @@ App.initializeDomain = function(domainName) {
 
 // infrastructure
 App.initializeDomain("Events");
-App.initializeDomain("Logs"); 
+App.initializeDomain("Logs");
 App.initializeDomain("Intervals");
 App.initializeDomain("HTML");
 
 // business >:)
 App.initializeDomain("AppModel");
 App.initializeDomain("Handlers");
+App.initializeDomain("Loader");
 
 // application services
 App.initializeDomain("RenderRegistry"); // used only by Render

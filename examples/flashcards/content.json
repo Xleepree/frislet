@@ -1,0 +1,14 @@
+[
+  {
+    "front": {"content": "lorem", "thumbnail": "assets/thumbnail.png"},
+    "back": {"content": "ipsum", "thumbnail": "assets/thumbnail.png"}
+  },
+  {
+    "front": {"content": "this game is about circles", "thumbnail": "assets/thumbnail.png"},
+    "back": {"content": "no", "thumbnail": "assets/thumbnail.png"}
+  },
+  {
+    "front": {"content": "monday", "thumbnail": "assets/thumbnail.png"},
+    "back": {"content": "tuesday", "thumbnail": "assets/thumbnail.png"}
+  }
+]
