@@ -12,13 +12,16 @@ App.Loader.fileExtensionToMIME = function (filename) {
   else if (filename.endsWith(".svg")) return "image/svg+xml";
 };
 
-App.Loader.decompressSet = async function (fileHandle) {
-  const file = await fileHandle.getFile();
-
+App.Loader.decompressSet = async function (file) {
   const arrayBuffer = await file.arrayBuffer();
 
   const bytes = new Uint8Array(arrayBuffer);
   const targetDirectory = "assets/";
+
+  // prevent dangling urls when loading new set. we don't want memory leaks!
+  for (const url of Object.values(App.AppModel.runtime.currentSet.images)) {
+    URL.revokeObjectURL(url);
+  }
 
   const unzipped = await new Promise((resolve, reject) => {
     unzip(bytes, (err, decompressed) => {
@@ -33,6 +36,8 @@ App.Loader.decompressSet = async function (fileHandle) {
             return;
           }
 
+          // add IMAGES from assets/ to the images collection as a blob url
+          // this makes loading thumbnails when developing something like a flashcard much easier, and much faster than encoding it as a base64 string (i believe)
           const fileData = decompressed[filePath];
           const mime = App.Loader.fileExtensionToMIME(filePath);
           const blob = new Blob([fileData], { type: mime });
@@ -44,6 +49,7 @@ App.Loader.decompressSet = async function (fileHandle) {
       }
     });
   });
+
   const manifestBytes = unzipped["manifest.json"];
   const contentBytes = unzipped["content.json"];
 
