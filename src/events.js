@@ -29,8 +29,8 @@ App.Events.Signals = {
         const listeners = App.Events.Signals.listeners[event.id];
         if (!event) {
             return console.error(`Event "${event} to emit does not exist`);
-        } else if (!listeners) { 
-            return; 
+        } else if (!listeners) {
+            return;
         } else if (!App.Events.Signals.validatePayload(event, payload)) {
             return console.error(`Payload "${Object.entries(payload)}" is invalid for emitting event ${event.id}`);
         } else {
@@ -58,10 +58,12 @@ App.Events.events = {
         firstUserInteraction: {
             id: "generic:first_user_interaction"
         }
-    }
+  },
+  appModel: {
+  }
 }
 
-App.Events.chainEvents = function() {
+App.Events.chainEvents = function () {
     App.Logs.internalMessage("Chained together all possible events (none)");
 }
 
