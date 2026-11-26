@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Content",
+    "description": "A file in a .frislet archive for its content",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": ["front", "back"],
+        "properties": {
+            "front": {"$ref": "#/$defs/flashcard-side"},
+            "back": {"$ref": "#/$defs/flashcard-side"}
+        }
+    },
+    "$defs": {
+        "flashcard-side": {
+            "type": "object",
+            "required": ["content", "thumbnail"],
+            "properties": {
+                "content": {"type": "string"},
+                "thumbnail": {"type": "boolean"}
+            }
+        }
+    }
+}

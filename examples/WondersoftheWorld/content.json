@@ -1,0 +1,30 @@
+[
+    {
+        "front": {"content": null, "thumbnail": true},
+        "back": {"content": "Machu Picchu", "thumbnail": null}
+    },
+    {
+        "front": {"content": null, "thumbnail": true},
+        "back": {"content": "Petra", "thumbnail": false}
+    },
+    {
+        "front": {"content": null, "thumbnail": true},
+        "back": {"content": "Cristo Redentor", "thumbnail": false}
+    },
+    {
+        "front": {"content": null, "thumbnail": true},
+        "back": {"content": "Great Wall of China", "thumbnail": false}
+    },
+    {
+        "front": {"content": null, "thumbnail": true},
+        "back": {"content": "Colosseum", "thumbnail": false}
+    },
+    {
+        "front": {"content": null, "thumbnail": true},
+        "back": {"content": "Taj Mahal", "thumbnail": false}
+    },
+    {
+        "front": {"content": null, "thumbnail": true},
+        "back": {"content": "Chichén Itzá", "thumbnail": false}
+    }
+]

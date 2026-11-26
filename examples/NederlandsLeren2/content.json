@@ -1,0 +1,52 @@
+[
+    {
+        "front": {
+            "content": "We kunnen niet gaan omdat het regent.",
+            "thumbnail": false
+        },
+        "back": {
+            "content": "We cannot go because it is raining.",
+            "thumbnail": false
+        }
+    },
+    {
+        "front": {
+            "content": "Mijn Engels is niet zo goed...",
+            "thumbnail": false
+        },
+        "back": {
+            "content": "My English is not so good...",
+            "thumbnail": false
+        }
+    },
+    {
+        "front": {
+            "content": "Hebben jullie Spaanstaligen?",
+            "thumbnail": false
+        },
+        "back": {
+            "content": "Do you (plural) have Spanish speakers?",
+            "thumbnail": false
+        }
+    },
+    {
+        "front": {
+            "content": "Ik vind die videogame leuk.",
+            "thumbnail": false
+        },
+        "back": {
+            "content": "I like that videogame.",
+            "thumbnail": false
+        }
+    },
+    {
+        "front": {
+            "content": "Dat is niet van mij!",
+            "thumbnail": false
+        },
+        "back": {
+            "content": "That is not mine!",
+            "thumbnail": false
+        }
+    }
+]
